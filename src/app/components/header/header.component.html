@@ -1,0 +1,36 @@
+<div class="collapse bg-dark" id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-md-7 py-4">
+        <h4 class="text-white">About ME</h4>
+        <p class="text-muted display-4">Hi!</p>
+        <p class="text-muted">I 'm <span>FARAZ QURESHI</span>, WordPress Developer with 2 years of functional experience designing and managing business websites. Skilled in front-end development and implementing themes and plugins. Successfully creates attractive and user-friendly websites to meet the client's expectations. </p>
+      </div>
+      <div class="col-sm-4 offset-md-1 py-4">
+        <img src="../../../assets/images/pic.jpg" class="img-thumbnail" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand d-flex align-items-center">
+      <i class="fab fa-github mr-2"></i>
+      <strong>GitHub Search App</strong>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>
+<section class="jumbotron text-center" >
+  <div class="container">
+    <img src="../assets/images/github-logo.png" class="w-25 img-responsive">
+    <p>
+      <a href="#" [routerLink]="['/search']"  routerLinkActive="router-link-active" class="btn btn-md btn-dark mt-3">Search Github Repo</a>
+      <a href="#" *ngIf="router.url === '/search'" [routerLink]="['/']" class="btn btn-md btn-primary mt-3 ml-3">Back to HOME</a>
+    </p>
+
+  </div>
+</section>

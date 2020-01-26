@@ -1,0 +1,10 @@
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-4" *ngFor="let users of user">
+
+          <app-featured *ngIf="true" [user]="users"></app-featured>
+
+        </div>
+      </div>
+
+    </div>

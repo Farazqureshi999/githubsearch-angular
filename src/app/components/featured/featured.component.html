@@ -1,0 +1,10 @@
+
+<div class="card mb-2" style="width: 18rem;" *ngIf="user">
+  <img [src]="user.avatar_url" class="img-responsive w-100">
+  <div class="card-body">
+    <h5 class="card-title">{{user.login}}</h5>
+    <p class="card-text">{{user.followers}}</p>
+    <a [href]="user.html_url" target="_blank" class="btn btn-primary">Visit Profile</a>
+  </div>
+</div>
+
